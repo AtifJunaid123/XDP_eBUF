@@ -46,6 +46,7 @@ XDP is based on eBPF (Extended Berkeley Packet Filter), which is a virtual machi
 
 ### Prosmiscous Mode
 - Promiscuous mode is a special mode for network interface cards (NICs) where the NIC receives all network packets, not just those addressed to it.
+  The NIC passes all traffic it sees on the wire to the operating system, regardless of destination MAC address.
 ### Dependencies
 
 ```bash
