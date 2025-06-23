@@ -141,7 +141,6 @@ sudo cat /sys/kernel/debug/tracing/trace_pipe
 
 3. More Data Paths coming in future
    
-
 Project Implemented on [Academic Master](https://academic-master.com/) & [TIGERA](https://www.tigera.io/learn/guides/ebpf/ebpf-xdp/)
 
 

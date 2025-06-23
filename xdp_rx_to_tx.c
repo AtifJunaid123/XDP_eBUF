@@ -20,7 +20,6 @@ int xdp_echo_prog(struct xdp_md *ctx) {
     __builtin_memcpy(eth->h_dest, eth->h_source, ETH_ALEN);
     __builtin_memcpy(eth->h_source, tmp_mac, ETH_ALEN);
 
-    // Optional: Add further packet inspection or filtering here
 
     return XDP_TX;
 }
