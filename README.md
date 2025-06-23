@@ -44,7 +44,8 @@ XDP is based on eBPF (Extended Berkeley Packet Filter), which is a virtual machi
 
 3. Monitoring and Flow Sampling
 
-
+### Prosmiscous Mode
+- Promiscuous mode is a special mode for network interface cards (NICs) where the NIC receives all network packets, not just those addressed to it.
 ### Dependencies
 
 ```bash
