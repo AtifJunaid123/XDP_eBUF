@@ -62,7 +62,7 @@ sudo make install
 1. **xdpdump**:
 ```bash
 # Load xdp_filter
-xdp-filter load --mode skb eth0
+xdp-filter load --mode skb iface_name
 xdpdump -D
 
 # Run
@@ -107,7 +107,7 @@ sudo ip link set eth1 xdpgeneric obj xdp_drop.o sec xdp_drop
 
 # Load Program with type maps
 #  The -m sbk flag is used for generic XDP loading, which does not require a compliant hardware device.
-sudo xdp-loader load -m skb -s xdp_drop eth1 xdp_drop.o
+sudo xdp-loader load -m skb -s xdp_drop <if_name> xdp_drop.o
 #To use bpftool
 sudo ln -s /usr/lib/linux-tools/5.15.0-25-generic/bpftool /usr/local/bin/bpftool
 
@@ -124,9 +124,9 @@ sudo xdp-loader status
 
 ### Unload Program
 ```bash
-sudo ip link set eth1 xdpgeneric off
+sudo ip link set <iface_name> xdpgeneric off
 # or
-sudo xdp-loader unload -a eth1
+sudo xdp-loader unload -a <iface_name>
 ```
 ### Check Traffic on Kernal
 
